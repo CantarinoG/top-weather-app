@@ -24,10 +24,6 @@ body {
     */
 }
 
-body:hover {
-    background-color: aqua;
-}
-
 header {
     
 }
@@ -125,8 +121,36 @@ h2 {
 }
 
 main, .card {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.65);
     border-radius: 12px;
+}
+
+@media only screen and (min-width: 650px){
+    
+    #data-display {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .row {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: flex-start;
+    }
+
+    .upper-card {
+        font-size: small;
+    }
+
+    .lower-card {
+        font-size: larger;
+    }
+
+    .card {
+        flex: 1;
+    }
+
 }
 
 
