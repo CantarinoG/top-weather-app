@@ -57,9 +57,3 @@ export function renderUI() {
   `;
 
 }
-
-/*
-feels like - min temp - max temp
-
-cloudiness - wind speed - visibility - humidity
-*/
