@@ -12,45 +12,44 @@ export function renderUI() {
     </form>
   </header>
   <main>
-    <h1>Santos Dumont - BR</h1>
-    <h2>Lon: 45° Lat: 78°</h2> 
-    <h2>23:45:28</h2>
+    <h1>SELECT A CITY</h1>
+    <h2>Lon:- Lat:- </h2> 
     <img id="main-img" src="${clear}" alt="Clear Icon">
-    <h1 id="temp">45 °C</h1>
-    <h1>Sunny</h1>
-    <h2>Few clouds and a lot of sunlight</h2>
+    <h1 id="temp">-</h1>
+    <h1>-</h1>
+    <h2>-</h2>
   </main>
   <div id="data-display">
     <div class="row">
       <div class="card">
         <div class="upper-card">Feels Like</div>
-        <div class="lower-card">21°C</div>
+        <div class="lower-card">-</div>
       </div>
       <div class="card">
         <div class="upper-card">Min Temp</div>
-        <div class="lower-card">18°C</div>
+        <div class="lower-card">-</div>
       </div>
       <div class="card">
         <div class="upper-card">Max Temp</div>
-        <div class="lower-card">25°C</div>
+        <div class="lower-card">-</div>
       </div>
     </div>
     <div class="row">
       <div class="card">
         <div class="upper-card">Cloudiness</div>
-        <div class="lower-card">78%</div>
+        <div class="lower-card">-</div>
       </div>
       <div class="card">
         <div class="upper-card">Wind Speed</div>
-        <div class="lower-card">20m/s</div>
+        <div class="lower-card">-</div>
       </div>
       <div class="card">
         <div class="upper-card">Visibility</div>
-        <div class="lower-card">8000m</div>
+        <div class="lower-card">-</div>
       </div>
       <div class="card">
         <div class="upper-card">Humidity</div>
-        <div class="lower-card">78%</div>
+        <div class="lower-card">-</div>
       </div>
     </div>
   </div>

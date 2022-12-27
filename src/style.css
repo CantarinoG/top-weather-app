@@ -16,12 +16,6 @@ body {
     display: flex;
     flex-direction: column;
     transition: 0.7s;
-    /*
-    rgb(216, 233, 141) sun
-    rgb(238, 238, 238) snow
-    rgb(42, 37, 66) rain cloud
-    rgb(152, 150, 166)
-    */
 }
 
 

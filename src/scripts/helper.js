@@ -4,8 +4,3 @@ export function validateSearchValue(text) {
     return result;
 }
 
-export function convertDate(miliseconds) {
-    let d = new Date(miliseconds);
-    let formattedDate = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-    return formattedDate;
-  }
