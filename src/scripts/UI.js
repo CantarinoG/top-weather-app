@@ -2,7 +2,6 @@ import searchIcon from '../icons/search.svg';
 import clear from '../icons/clear.svg';
 
 export function renderUI() {
-  
   const body = document.querySelector('body');
   body.innerHTML = `
   <header>
@@ -59,5 +58,4 @@ export function renderUI() {
   <span class="slider"></span>
 </label>
   `;
-
 }

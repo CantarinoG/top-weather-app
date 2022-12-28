@@ -1,4 +1,4 @@
-/*{
+{
     "env": {
         "browser": true,
         "es2021": true
@@ -12,7 +12,10 @@
     },
     "rules": {
         "linebreak-style": "off",
-        "no-multiple-empty-lines": "off",
-        "eol-last": "off"
+        "eol-last": "off",
+        "no-restricted-globals": "off",
+        "eqeqeq" : "off",
+        "no-alert":"off",
+        "import/prefer-default-export": "off"
     }
-}*/
+}
