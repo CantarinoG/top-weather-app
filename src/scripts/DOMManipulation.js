@@ -1,4 +1,4 @@
-import { validateSearchValue } from "./helper";
+import { validateSearchValue, convertToC, convertToF } from "./helper";
 
 import clear from '../icons/clear.svg';
 import cloudy from '../icons/cloudy.svg';
@@ -56,6 +56,49 @@ export function setValues(weatherData) {
     windSpeed.textContent = `${weatherData.wind.speed}m/sec`;
     visibility.textContent = `${weatherData.visibility}m`;
     humidity.textContent = `${weatherData.main.humidity}%`;
+}
 
+export function changeUnits(setToFarenheit) {
+
+    const temp = document.querySelector("#temp");
+    const feelsLike = document.querySelector("#data-display > div:nth-child(1) > div:nth-child(1) > div.lower-card");
+    const minTemp = document.querySelector("#data-display > div:nth-child(1) > div:nth-child(2) > div.lower-card");
+    const maxTemp = document.querySelector("#data-display > div:nth-child(1) > div:nth-child(3) > div.lower-card");
+    if (setToFarenheit) {
+        let tempValue = +temp.textContent.replace('°C', '');
+        let feelsLikeValue = +feelsLike.textContent.replace('°C', '');
+        let minTempValue = +minTemp.textContent.replace('°C', '');
+        let maxTempValue = +maxTemp.textContent.replace('°C', '');
+        if(isNaN(tempValue) || isNaN(feelsLikeValue) || isNaN(minTempValue) || isNaN(maxTempValue)) {
+            return;
+        }
+        tempValue = convertToF(tempValue);
+        feelsLikeValue = convertToF(feelsLikeValue);
+        minTempValue = convertToF(minTempValue);
+        maxTempValue = convertToF(maxTempValue);
+        temp.textContent = `${tempValue}°F`;
+        feelsLike.textContent = `${feelsLikeValue}°F`;
+        minTemp.textContent = `${minTempValue}°F`;
+        maxTemp.textContent = `${maxTempValue}°F`;
+        }
+    else {
+        console.log("aaa");
+        let tempValue = +temp.textContent.replace('°F', '');
+        let feelsLikeValue = +feelsLike.textContent.replace('°F', '');
+        let minTempValue = +minTemp.textContent.replace('°F', '');
+        let maxTempValue = +maxTemp.textContent.replace('°F', '');
+        console.log("aaa");
+        if(isNaN(tempValue) || isNaN(feelsLikeValue) || isNaN(minTempValue) || isNaN(maxTempValue)) {
+            return;
+        }
+        tempValue = convertToC(tempValue);
+        feelsLikeValue = convertToC(feelsLikeValue);
+        minTempValue = convertToC(minTempValue);
+        maxTempValue = convertToC(maxTempValue);
+        temp.textContent = `${tempValue}°C`;
+        feelsLike.textContent = `${feelsLikeValue}°C`;
+        minTemp.textContent = `${minTempValue}°C`;
+        maxTemp.textContent = `${maxTempValue}°C`;
+    }
 
 }

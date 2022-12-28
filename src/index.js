@@ -1,7 +1,7 @@
 import './style.css';
 
 import { renderUI } from './scripts/UI.js';
-import { getSearchValue, setValues } from './scripts/DOMManipulation';
+import { getSearchValue, setValues, changeUnits } from './scripts/DOMManipulation';
 import { getData } from './scripts/API';
 
 renderUI();
@@ -12,6 +12,14 @@ form.addEventListener("submit", (e) => {
   let value = getSearchValue();
   let weatherData = getData(value).then(resolve => {
     setValues(resolve);
+    changeUnits(toggleSwitch.checked);
   }, reject => console.log("Error:", reject));
+});
+
+const toggleSwitch = document.querySelector("body > label > input[type=checkbox]");
+
+toggleSwitch.addEventListener('change', (e) => {
+  console.log(toggleSwitch.checked)
+  changeUnits(toggleSwitch.checked);
 });
 
