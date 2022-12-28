@@ -5,6 +5,11 @@ import cloudy from '../icons/cloudy.svg';
 import rainy from '../icons/rainy.svg';
 import snowy from '../icons/snowy.svg';
 
+import clearbg from '../imgs/sunny.jpg';
+import rainbg from '../imgs/rainy.jpg';
+import cloudybg from '../imgs/cloudy.jpg';
+import snowbg from '../imgs/snowy.jpg';
+
 export function getSearchValue() {
   const searchInput = document.querySelector('input[type="search"]');
   const validatedValue = validateSearchValue(searchInput.value);
@@ -31,16 +36,16 @@ export function setValues(weatherData) {
   const id = weatherData.weather[0].id.toString();
   if (id == 800) {
     icon.src = clear;
-    document.body.style.backgroundColor = 'rgb(216, 233, 141)';
+    document.body.style.backgroundImage = `url('${clearbg}')`;
   } else if (id.startsWith('6')) {
     icon.src = snowy;
-    document.body.style.backgroundColor = 'rgb(238, 238, 238)';
+    document.body.style.backgroundImage = `url('${snowbg}')`;
   } else if (id.startsWith('2') || id.startsWith('3') || id.startsWith('5')) {
     icon.src = rainy;
-    document.body.style.backgroundColor = 'rgb(42, 37, 66)';
+    document.body.style.backgroundImage = `url('${rainbg}')`;
   } else if (id.startsWith('7') || id.startsWith('80')) {
     icon.src = cloudy;
-    document.body.style.backgroundColor = 'rgb(152, 150, 166)';
+    document.body.style.backgroundImage = `url('${cloudybg}')`;
   } else {
     alert('Something went wrong. Please try again.');
   }

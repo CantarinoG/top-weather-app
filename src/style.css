@@ -17,6 +17,8 @@ body {
     flex-direction: column;
     transition: 1s;
     position: relative;
+    background-image: url("./imgs/sunny.jpg");
+    color: white;
 }
 
 
@@ -32,7 +34,7 @@ body {
 form {
     margin-left: 3%;
     margin-right: 3%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     display: flex;
 }
 
@@ -49,6 +51,16 @@ input[type="search"]{
     flex: 10;
     text-align: center;
     font-family: var(--roboto);
+    color: white;
+}
+
+input[type="search"]::placeholder { 
+    color: white;
+    opacity: 1; 
+  }
+
+img {
+    filter: invert(100%) sepia(100%) saturate(13%) hue-rotate(218deg) brightness(104%) contrast(104%);
 }
 
 input[type="search"]:focus {
@@ -110,11 +122,6 @@ h2 {
 
 .lower-card {
     text-align: center;
-}
-
-main, .card {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
 }
 
 @media only screen and (min-width: 650px){
