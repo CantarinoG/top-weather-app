@@ -1,7 +1,7 @@
 import './style.css';
 
 import { renderUI } from './scripts/UI.js';
-import { getSearchValue, setValues, changeUnits } from './scripts/DOMManipulation';
+import { getSearchValue, setValues, changeUnits, setFavicon } from './scripts/DOMManipulation';
 import { getData } from './scripts/API';
 
 renderUI();
@@ -22,4 +22,6 @@ toggleSwitch.addEventListener('change', (e) => {
   console.log(toggleSwitch.checked)
   changeUnits(toggleSwitch.checked);
 });
+
+setFavicon();
 

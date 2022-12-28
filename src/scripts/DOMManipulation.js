@@ -102,3 +102,11 @@ export function changeUnits(setToFarenheit) {
     }
 
 }
+
+export function setFavicon() {
+    let headTitle = document.querySelector('head');
+    let setFavicon = document.createElement('link');
+    setFavicon.setAttribute('rel','shortcut icon');
+    setFavicon.setAttribute('href', clear);
+    headTitle.appendChild(setFavicon);
+}
